@@ -1,0 +1,13 @@
+C:\Users\Usuario\source\repos\MicroWave\MicroWave\bin\Debug\netcoreapp3.1\MicroWave.exe
+C:\Users\Usuario\source\repos\MicroWave\MicroWave\bin\Debug\netcoreapp3.1\MicroWave.deps.json
+C:\Users\Usuario\source\repos\MicroWave\MicroWave\bin\Debug\netcoreapp3.1\MicroWave.runtimeconfig.json
+C:\Users\Usuario\source\repos\MicroWave\MicroWave\bin\Debug\netcoreapp3.1\MicroWave.runtimeconfig.dev.json
+C:\Users\Usuario\source\repos\MicroWave\MicroWave\bin\Debug\netcoreapp3.1\MicroWave.dll
+C:\Users\Usuario\source\repos\MicroWave\MicroWave\bin\Debug\netcoreapp3.1\MicroWave.pdb
+C:\Users\Usuario\source\repos\MicroWave\MicroWave\obj\Debug\netcoreapp3.1\MicroWave.csprojAssemblyReference.cache
+C:\Users\Usuario\source\repos\MicroWave\MicroWave\obj\Debug\netcoreapp3.1\MicroWave.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\MicroWave\MicroWave\obj\Debug\netcoreapp3.1\MicroWave.AssemblyInfoInputs.cache
+C:\Users\Usuario\source\repos\MicroWave\MicroWave\obj\Debug\netcoreapp3.1\MicroWave.AssemblyInfo.cs
+C:\Users\Usuario\source\repos\MicroWave\MicroWave\obj\Debug\netcoreapp3.1\MicroWave.dll
+C:\Users\Usuario\source\repos\MicroWave\MicroWave\obj\Debug\netcoreapp3.1\MicroWave.pdb
+C:\Users\Usuario\source\repos\MicroWave\MicroWave\obj\Debug\netcoreapp3.1\MicroWave.genruntimeconfig.cache
