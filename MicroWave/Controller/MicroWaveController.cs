@@ -1,17 +1,21 @@
 ﻿using System;
+using MicroWave.Utils;
 
-namespace MicroWave
+namespace MicroWave.Controller
 {
     class MicroWaveController
     {
 
         MicroWave model = new MicroWave();
 
-        
-
         public String[] getStatus()
         {
             return new String[3] { model.getAlimento(), model.getPotencia().ToString(), model.getTempo().ToString() } ;
+        }
+
+        public ResponseSchema definePrograma( ProgramsSchema programa)
+        {
+            return new ResponseSchema(false, "");
         }
 
         public ResponseSchema defineAlimento(String value)
@@ -33,11 +37,6 @@ namespace MicroWave
         public ResponseSchema aquecer()
         {
             return model.aquecer();
-        }
-
-        public void aquecerRapido()
-        {
-            model.aquecerRapido();
         }
     }
 }

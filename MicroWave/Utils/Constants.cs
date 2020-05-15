@@ -1,6 +1,6 @@
 ﻿using System; 
 
-namespace MicroWave
+namespace MicroWave.Utils
 {
     public static class Constants
     {
@@ -17,6 +17,7 @@ namespace MicroWave
 
         public static string messageErrorHeatingPower => "Erro ao aquecer. Potencia deve estar entre 1 e 10.";
 
+        public static string messageErrorGetProgram => "Alimento incompatível com o programa.";
 
     }
 }

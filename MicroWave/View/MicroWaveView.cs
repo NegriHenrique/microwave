@@ -1,14 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
+using MicroWave.Controller;
+using MicroWave.Utils;
 
-namespace MicroWave
+namespace MicroWave.View
 {
     class MicroWaveView
     {
 
         MicroWaveController controller = new MicroWaveController();
+        Actions actions = new Actions();
 
         public void start()
         {
@@ -17,7 +18,6 @@ namespace MicroWave
                 Thread.Sleep(2000);
                 this.loadStatusAtual();
         }
-
 
         private void loadHeader()
         {
@@ -69,26 +69,26 @@ namespace MicroWave
                 case 1:
                     Console.WriteLine("Opção 1: Definir alimento");
                     Console.WriteLine("Digite o alimento...");
-                    error = this.defineAlimento(Console.ReadLine());
+                    error = actions.defineAlimento(Console.ReadLine());
                     break;
                 case 2:
                     Console.WriteLine("Opção 2: Definir potencia");
                     Console.WriteLine("Digite a potencia de 1 a 10");
 
-                    error = this.definePotencia(Convert.ToInt32(Console.ReadLine()));
+                    error = actions.definePotencia(Convert.ToInt32(Console.ReadLine()));
                     break;
                 case 3:
                     Console.WriteLine("Opção 3: Definir tempo");
                     Console.WriteLine("Digite o tempo em segundos entre 1 e 120");
-                    error = this.defineTempo(Convert.ToInt32(Console.ReadLine()));
+                    error = actions.defineTempo(Convert.ToInt32(Console.ReadLine()));
                     break;
                 case 4:
                     Console.WriteLine("Opção 4: Aquecer");
                     Console.WriteLine("Aquecendo...");
-                    error = this.aquecer();
+                    error = actions.aquecer();
                     break;
                 case 5:
-                    this.aquecerRapido();
+                    actions.aquecerRapido();
                     break;
                 case 6:
                     Console.WriteLine("Opção 6: Sair");
@@ -107,62 +107,6 @@ namespace MicroWave
                 
         }
 
-        private bool defineAlimento(String valor)
-        {
-            ResponseSchema response = controller.defineAlimento(valor);
-
-            Console.WriteLine(response.getMessage());
-
-            return response.getError();
-            
-        }
-
-        private bool definePotencia(int valor)
-        {
-            ResponseSchema response = controller.definePotencia(valor);
-
-            Console.WriteLine(response.getMessage());
-
-            return response.getError();
-        }
-
-        private bool defineTempo(int valor)
-        {
-            ResponseSchema response = controller.defineTempo(valor);
-
-            Console.WriteLine(response.getMessage());
-
-            return response.getError();
-        }
-
-        private bool aquecer()
-        {
-            ResponseSchema response = controller.aquecer();
-
-            Console.WriteLine(response.getMessage());
-
-            return response.getError();
-        }
-
-        private bool aquecerRapido()
-        {
-            Console.WriteLine("Opção 5: Aquecimento rápido");
-            Console.WriteLine("Aquecendo na potencia 8 e durante 30 segundos\n");
-            Console.WriteLine("Mudando tempo para 30 segundos...");
-            if(!this.defineTempo(30))
-            {
-                Console.WriteLine("\nMudando potencia para 8...");
-                if (!this.definePotencia(8))
-                {
-                    Console.WriteLine("\nAquecendo...");
-                    if (!this.aquecer())
-                    {
-                        return false;
-                    }
-                }
-            }
-
-            return true;
-        }
+        
     }
 }

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MicroWave
+﻿namespace MicroWave.View
 {
     class Program
     {
@@ -10,7 +8,6 @@ namespace MicroWave
             MicroWaveView view = new MicroWaveView();
 
             view.start();
-
 
         }
     }

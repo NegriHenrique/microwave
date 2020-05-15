@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MicroWave
+namespace MicroWave.Utils
 {
     public class ResponseSchema
     {
