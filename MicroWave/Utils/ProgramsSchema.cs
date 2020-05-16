@@ -8,13 +8,15 @@ namespace MicroWave.Utils
         private int power = 8;
         private int time = 30;
         private char character = '.';
+        private String instruction = "";
 
-        public ProgramsSchema(String name, int power, int time, char character)
+        public ProgramsSchema(String name, int power, int time, char character, String instruction)
         {
             this.name = name;
             this.power = power;
             this.time = time;
             this.character = character;
+            this.instruction = instruction;
         }
 
         public ProgramsSchema()
@@ -40,9 +42,14 @@ namespace MicroWave.Utils
             return this.time;
         }
 
-        public int getcharacter()
+        public char getCharacter()
         {
             return this.character;
+        }
+
+        public String getInstruction()
+        {
+            return this.instruction;
         }
 
     }

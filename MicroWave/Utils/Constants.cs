@@ -19,5 +19,10 @@ namespace MicroWave.Utils
 
         public static string messageErrorGetProgram => "Alimento incompatível com o programa.";
 
+        public static string messageErrorSetCharacter => "Erro ao setar o caractere de aquecimento.";
+        public static string messageSuccessSetCharacter(char value) => value + " definido como caractere com sucesso";
+
+        public static string messageSuccessSetProgram => "Programa definido com sucesso.";
+
     }
 }

@@ -31,7 +31,52 @@ namespace MicroWave.View
 
         }
 
-        public bool definePotencia(int valor)
+        public bool verUmProgramaDefinido(String name)
+        {
+            ProgramsSchema programa = programs.findPreSettingsPrograms(StringParser.RemoveDiacritics(name));
+            if (programa.getName() != "default")
+            {
+                Console.WriteLine("Programa: {0}", programa.getName());
+                Console.WriteLine("Potencia: {0}", programa.getPower());
+                Console.WriteLine("Tempo: {0}", programa.getTime());
+                Console.WriteLine("Caractere de aquecimento: '{0}'", programa.getCharacter());
+                Console.WriteLine("Instruções: {0}", programa.getInstruction());
+            } else
+            {
+                Console.WriteLine("Programa não encontrado....");
+            }
+            Console.WriteLine("Aperte qualquer recla para voltar ao menu");
+            Console.ReadKey();
+            return false; // retorno para quando nao der nenhum erro
+        }
+
+        public bool verProgramasDefinidos()
+        {
+            ProgramsSchema[] programas = programs.getPrograms();
+            for (int i = 0; i < programas.Length; i++)
+            {
+                if (i != 0)
+                {
+                    Console.WriteLine("======================================");
+                }
+
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("Programa {0}: {1}", i, programas[i].getName());
+                Console.WriteLine("Potencia: {0}", programas[i].getPower());
+                Console.WriteLine("Tempo: {0}", programas[i].getTime());
+                Console.WriteLine("Caractere de aquecimento: '{0}'", programas[i].getCharacter());
+                Console.WriteLine("Instruções: {0}", programas[i].getInstruction());
+                Console.WriteLine("");
+                Console.WriteLine("");
+
+            }
+            Console.WriteLine("Aperte qualquer recla para voltar ao menu");
+            Console.ReadKey();
+            return false; // retorno para quando nao der nenhum erro
+        }
+
+        private bool definePotencia(int valor)
         {
             ResponseSchema response = controller.definePotencia(valor);
 
@@ -40,7 +85,7 @@ namespace MicroWave.View
             return response.getError();
         }
 
-        public bool defineTempo(int valor)
+        private bool defineTempo(int valor)
         {
             ResponseSchema response = controller.defineTempo(valor);
 
@@ -60,8 +105,6 @@ namespace MicroWave.View
 
         public bool aquecerRapido()
         {
-            Console.WriteLine("Opção 5: Aquecimento rápido");
-            Console.WriteLine("Aquecendo na potencia 8 e durante 30 segundos\n");
             Console.WriteLine("Mudando tempo para 30 segundos...");
             if (!this.defineTempo(30))
             {

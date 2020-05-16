@@ -6,11 +6,22 @@ namespace MicroWave
 {
     class MicroWave
     {
+        private static MicroWave _instance;
         private String alimento = "";
         private int tempo = 1;
         private int potencia = 1;
         private bool ligado = false;
+        private char caractere = '.';
 
+
+        public static MicroWave getInstance()
+        {
+            if(_instance == null)
+            {
+                _instance = new MicroWave();
+            }
+            return _instance;
+        }
 
         public String getAlimento()
         {
@@ -70,6 +81,17 @@ namespace MicroWave
             return value ? "O micro-ondas foi ligado." : "O micro-ondas foi desligado.";
         }
 
+        public char getCaractere()
+        {
+            return this.caractere;
+        }
+
+        public ResponseSchema setCaractere(char value)
+        {
+            this.caractere = value;
+            return new ResponseSchema(false, Constants.messageSuccessSetCharacter(value));
+        }
+
         public void aquecerRapido()
         {
             Console.WriteLine(this.setTempo(30));
@@ -100,7 +122,7 @@ namespace MicroWave
 
             for(int i = 0; i < pontos; i++)
             {
-                alimento = alimento + ".";
+                alimento = alimento + this.caractere;
             }
 
             this.setAlimento(alimento);

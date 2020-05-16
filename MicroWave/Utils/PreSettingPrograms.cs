@@ -12,11 +12,11 @@ namespace MicroWave.Utils
 
             this.programs = new ProgramsSchema[5]
                 {
-                    new ProgramsSchema("frango", 3, 30, ';'),
-                    new ProgramsSchema("pipoca", 7, 40, ','),
-                    new ProgramsSchema("batata", 2, 10, ':'),
-                    new ProgramsSchema("feijao", 10, 120, ','),
-                    new ProgramsSchema("lasanha", 5, 90, '`'),
+                    new ProgramsSchema("frango", 3, 30, ';', "Aqui tem uma instrução que eu nao sei o que por"),
+                    new ProgramsSchema("pipoca", 7, 40, ',', "Aqui tem uma instrução que eu nao sei o que por"),
+                    new ProgramsSchema("batata", 2, 10, ':', "Aqui tem uma instrução que eu nao sei o que por"),
+                    new ProgramsSchema("feijao", 10, 120, ',', "Aqui tem uma instrução que eu nao sei o que por"),
+                    new ProgramsSchema("lasanha", 5, 90, '`', "Aqui tem uma instrução que eu nao sei o que por"),
                 };
         }
 
@@ -27,6 +27,11 @@ namespace MicroWave.Utils
                 _instance = new PreSettingPrograms();
             }
             return _instance;
+        }
+
+        public ProgramsSchema[] getPrograms()
+        {
+            return this.programs;
         }
 
         public ProgramsSchema findPreSettingsPrograms(String value)
