@@ -47,19 +47,19 @@ pontos (..), e assim por diante.
 
 ### Nível 2
 
-- [] O micro-ondas deve fornecer 5 programas de aquecimento com tempo e potência pré-definidos.
-- [] Cada programa deve verificar se é compatível com o tipo de string fornecido:
-> - []  Para isso, procurar na string por algum texto chave (ex: frango). Se encontrar, permite a
+- [x] O micro-ondas deve fornecer 5 programas de aquecimento com tempo e potência pré-definidos.
+- [x] Cada programa deve verificar se é compatível com o tipo de string fornecido:
+> - [x]  Para isso, procurar na string por algum texto chave (ex: frango). Se encontrar, permite a
 utilização do programa. Se não encontrar, lançar uma exceção de alimento incompatível
 com o programa.
-> - [] Cada programa deve ter um nome e instruções de uso;
-> - [] Cada programa deve “aquecer” a string com um caractere diferente, pré-definido (ao invés de
+> - [x] Cada programa deve ter um nome e instruções de uso;
+> - [x] Cada programa deve “aquecer” a string com um caractere diferente, pré-definido (ao invés de
 ponto);
-> - [] Deve ser possível consultar os programas existentes, obtendo seus nomes, instruções, tempo e
+> - [x] Deve ser possível consultar os programas existentes, obtendo seus nomes, instruções, tempo e
 potência.
-> - [] Deve ser possível consultar os programas de acordo com o alimento compatível, obtendo seus
+> - [x] Deve ser possível consultar os programas de acordo com o alimento compatível, obtendo seus
 nomes, instruções, tempo e potência.
-> - [] Permitir o disparo do aquecimento utilizando um dos programas.
+> - [x] Permitir o disparo do aquecimento utilizando um dos programas.
 
 ### Nível 3
 
