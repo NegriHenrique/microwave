@@ -1,6 +1,6 @@
 ﻿namespace MicroWave.View
 {
-    class Program
+    class Index
     {
         static void Main(string[] args)
         {

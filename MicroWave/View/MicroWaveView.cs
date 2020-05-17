@@ -48,15 +48,16 @@ namespace MicroWave.View
 
         private void loadMenu()
         {
-            String[] valores = new String[6]{ "1", "2", "3", "4", "5", "6" };
+            String[] valores = new String[7]{ "1", "2", "3", "4", "5", "6", "7" };
 
             Console.WriteLine("Escolha uma das opções:");
             Console.WriteLine("1 - Definir Alimento");
             Console.WriteLine("2 - Buscar por programa");
             Console.WriteLine("3 - Ver programas existentes");
-            Console.WriteLine("4 - Aquecer");
-            Console.WriteLine("5 - Aquecimento Rapido");
-            Console.WriteLine("6 - Sair");
+            Console.WriteLine("4 - Criar novo programa");
+            Console.WriteLine("5 - Aquecer");
+            Console.WriteLine("6 - Aquecimento Rapido");
+            Console.WriteLine("7 - Sair");
 
             String input = Console.ReadLine();
 
@@ -96,16 +97,20 @@ namespace MicroWave.View
                     error = actions.verProgramasDefinidos();
                     break;
                 case 4:
+                    Console.WriteLine("Opção 4: Criar novo programa");
+                    error = actions.criarNovoPrograma();
+                    break;
+                case 5:
                     Console.WriteLine("Opção 4: Aquecer");
                     Console.WriteLine("Aquecendo...");
                     error = actions.aquecer();
                     break;
-                case 5:
+                case 6:
                     Console.WriteLine("Opção 5: Aquecimento rápido");
                     Console.WriteLine("Aquecendo na potencia 8 e durante 30 segundos\n");
                     actions.aquecerRapido();
                     break;
-                case 6:
+                case 7:
                     Console.WriteLine("Opção 6: Sair");
                     Console.WriteLine("Fechando o programa...");
                     System.Environment.Exit(0);

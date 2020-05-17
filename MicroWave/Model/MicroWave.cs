@@ -45,7 +45,7 @@ namespace MicroWave
 
         public ResponseSchema setTempo(int value)
         {
-            if (value >= 1 && value <= 120)
+            if (value >= Constants.minTimePossible && value <= Constants.maxTimePossible)
             {
                 this.tempo = value;
                 return new ResponseSchema(false, Constants.messageSuccessSetTime(value));
@@ -61,7 +61,7 @@ namespace MicroWave
 
         public ResponseSchema setPotencia(int value)
         {
-            if(value >= 1 && value <= 10)
+            if(value >= Constants.minPowerPossible && value <= Constants.maxPowerPossible)
             {
                 this.potencia = value;
                 return new ResponseSchema(false, Constants.messageSuccessSetPower(value));
