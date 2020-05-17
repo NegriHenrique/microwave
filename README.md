@@ -63,12 +63,12 @@ nomes, instruções, tempo e potência.
 
 ### Nível 3
 
-- [] Permitir que a lista de programas originais seja estendida. Ou seja, a aplicação deve permitir que sejam
+- [x] Permitir que a lista de programas originais seja estendida. Ou seja, a aplicação deve permitir que sejam
 criados programas de aquecimento customizados:
-> - [] Em cada programa deve-se definir nome, instruções, tempo, potência e caractere de
+> - [x] Em cada programa deve-se definir nome, instruções, tempo, potência e caractere de
 “aquecimento”;
-> - [] Cada programa deve implementar sua própria verificação de compatibilidade do alimento;
-> - [] Uma vez que o programa tenha sido criado, ele deve constar juntamente com os programas originais
+> - [x] Cada programa deve implementar sua própria verificação de compatibilidade do alimento;
+> - [x] Uma vez que o programa tenha sido criado, ele deve constar juntamente com os programas originais
 do micro-ondas.
 
 ### Nível 4
@@ -80,14 +80,14 @@ mensagem.
 > - [] Dispara o evento de mensagem nos locais em que são lançadas exceções de negócio;
 > - [] Se o evento de mensagens tiver sido assinado, não lançar as exceções.
 
-Nível 5
+### Nível 5
 
 - [] Permitir que a entrada seja uma string ou um arquivo de texto em disco:
 > - [] Quando for um arquivo, a cada segundo o arquivo deve ser atualizado com os caracteres de
 aquecimento do programa, conforme feito com a string.
 > - [] Para saber se é um arquivo, verificar se a string fornecida é um caminho para um arquivo existente.
 
-Nível 6
+### Nível 6
 
 - [] Permitir que o aquecimento seja pausado ou cancelado a qualquer momento:
 > - [] Se o aquecimento foi pausado, ele pode ser retomado do ponto em que parou.
